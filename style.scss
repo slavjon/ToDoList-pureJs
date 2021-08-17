@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans' sans-serif;
+    background: #333;
+    font-size: 16px;
+    min-width: 320px;
+}
+
+.container {
+    position: relative;
+}
+
+.todo__wrap {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    .h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .todo__form {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 8px;
+    }
+    .input__new-list {
+        font-size: 1rem;
+        padding: 7px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        outline: none;
+        transition: all .15s ease;
+        &:focus {
+            border-bottom: 2px solid #222;
+        }
+    }
+    .btn__add {
+        border: none;
+        background: rgb(35, 199, 62);
+        color: #333;
+        font-weight: bold;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+    .list-tasks {
+        list-style-type: none;
+        margin-top: 20px;
+        li {
+            position: relative;
+            display: block;
+            padding: 8px 40px 8px 8px;
+            transition: .1s;
+            &:nth-child(odd) {
+                background: rgb(226, 226, 226);
+            }
+            &:hover {
+                background: rgba(255, 168, 168, 0.281);
+            }
+            .close-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                border: 0;
+                width: 34px;
+                height: 34px;
+                display: flex;
+                font-size: 1.2rem;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                background: transparent;
+                &:hover {
+                    background: rgb(255, 68, 68);
+                }
+            }
+        }
+    }
+}
